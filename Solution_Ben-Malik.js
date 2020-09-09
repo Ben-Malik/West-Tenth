@@ -1,3 +1,9 @@
+/**
+ * @author Ben-Malik TCHAMALAM
+ * https://benmalik.com
+ * 
+ */
+
 //A helper function to compare two given objects
 function compare(a, b) {
     if (parseInt(a.rank) < parseInt(b.rank)) {
@@ -9,7 +15,11 @@ function compare(a, b) {
     return 0;
 }
 
-//The main function to return an array composed of unique and sorted values limited to four.
+/**
+ * The main function to return an array composed of unique and sorted values limited to four.
+ * @param {*} arrayA An array of objects to be concatenated.
+ * @param {*} arrayB An array of objects to be concatenated.
+ */
 function getUniqueObjects(arrayA, arrayB) {
     var allArrays = arrayA.concat(arrayB);
     uniqueArray = [...new Map(allArrays.map(object => [object.id, object])).values()]
