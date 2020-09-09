@@ -20,7 +20,7 @@ function compare(objectA, objectB) {
  * @param {*} arrayA An array of objects to be concatenated.
  * @param {*} arrayB An array of objects to be concatenated.
  */
-function getUniqueObjectsSortedByID(arrayA, arrayB) {
+function getUniqueObjectsSortedByRank(arrayA, arrayB) {
     var allArrays = arrayA.concat(arrayB);
     uniqueArray = [...new Map(allArrays.map(object => [object.id, object])).values()];
     var sortedArray = uniqueArray.sort(compare);
@@ -33,4 +33,4 @@ function getUniqueObjectsSortedByID(arrayA, arrayB) {
 var arrayA = [{id: 1, rank: 2}, {id: 2, rank: 23}, {id: 3, rank: 3}, {id: 4, rank: 29},{id: 5, rank: 12}];
 var arrayB = [{id: 1, rank: 52}, {id: 2, rank: 22}, {id: 3, rank: 9}, {id: 4, rank: 21},{id: 5, rank: 45}];
 
-console.log(getUniqueObjectsSortedByID(arrayA, arrayB));
+console.log(getUniqueObjectsSortedByRank(arrayA, arrayB));
